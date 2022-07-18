@@ -5,6 +5,7 @@ $(readyNow);
 function readyNow() {
     console.log('Jquery Ready');
     $('#salary-submit').click(submit);
+
 }
 // DECLARE TOTAL MONTHLY COST ARRAY
 let totalSalary = 0;
@@ -30,17 +31,19 @@ function submit(){
     ){
         // APPEND EMPLOYEE DATA TO DOM
         $('#table-data').append(`
-        <tr>
+             <tr>
                 <td>${firstName}</td>
                 <td>${lastName}</td>
                 <td>${id}</td>
                 <td>${title}</td>
                 <td>${salary}</td>
                 <td>
-                    <button>Delete</button>
+                    <button class="delete" data-salary="${salary}">Delete</button>
                 </td>
             </tr>
         `);
+        
+        $('.delete').click(deleteEmployee);
 
         // CLEAR INPUT VALUES
         $('#first-name').val('');
@@ -56,9 +59,28 @@ function submit(){
 }
 
 function totalCost(salaries){
+    
     let totalMonthly = salaries/12;
     console.log('total monthly cost is ', totalMonthly);
 
     $('#monthly-cost').empty();
     $('#monthly-cost').append(totalMonthly);
+
+    if (totalMonthly > 20000){
+        $('#total-monthly').css({"backgroundColor":"red"});
+    }
+
+    else{
+        $('#total-monthly').css({"backgroundColor":"transparent"});
+    }
 }
+
+function deleteEmployee(){
+    console.log('delete employee');
+    $(this).parent().parent().empty();
+
+    let salary = Number($(this).data('salary'));
+    totalSalary -= salary;
+    totalCost(totalSalary);
+}
+

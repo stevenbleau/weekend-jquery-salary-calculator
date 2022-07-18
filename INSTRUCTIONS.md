@@ -22,9 +22,9 @@ HTML
 JS
 [X] submit button click event
 [X] function that appends info to DOM and clears input fields
-[] function that calculates monthly costs and appends to the DOM
-[] turn total monthly cost if it exceeds $20,000
-[] function that deletes employee from DOM when delete button clicked
+[x] function that calculates monthly costs and appends to the DOM
+[x] turn total monthly cost if it exceeds $20,000
+[x] function that deletes employee from DOM when delete button clicked
 
 
 
