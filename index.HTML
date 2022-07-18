@@ -52,7 +52,7 @@
              placeholder="Annual Salary"
          />
         <!-- SUBMIT BUTTON -->
-        <button class="submit button" id="salary-submit">
+        <button class="submit-button" id="salary-submit">
             Submit
         </button>
     
@@ -68,18 +68,23 @@
             <!-- Blank column for delete button -->
             <th></th> 
         </thead>
-        <tbody>
-            <tr>
+        <tbody id="table-data">
+            <!-- <tr>
                 <td>Jen</td>
                 <td>Barber</td>
                 <td>5421</td>
                 <td>Team Lead</td>
                 <td>$80,000</td>
-            </tr>
+                <td>
+                    <button>Delete</button>
+                </td>
+            </tr> -->
         </tbody>
     </table>
     <div id="total-monthly">
-        <h4>Total Monthly: $</h4>
+        <h4>
+            Total Monthly: $<span id="monthly-cost">0</span>
+       </h4>
     </div>
     </body>
 </html>

@@ -13,6 +13,21 @@ A 'Submit' button should collect the form information, store the information to 
 
 Create a delete button that removes an employee from the DOM. For Base mode, it does **not** need to remove that Employee's salary from the reported total.
 
+HTML
+[x] employee input fields
+[x] submit button
+[x] data table 
+[x] total monthly 
+
+JS
+[X] submit button click event
+[X] function that appends info to DOM and clears input fields
+[] function that calculates monthly costs and appends to the DOM
+[] turn total monthly cost if it exceeds $20,000
+[] function that deletes employee from DOM when delete button clicked
+
+
+
 ### Files Provided
 No files have been provided (just instructions.md and a readme.md). Instead of forking and cloning this repo, please choose "Use This Template" (green button) and name your new repo "weekend-jquery-salary-calculator" and clone down from there. Make sure to commit regularily!
 
