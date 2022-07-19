@@ -43,7 +43,6 @@ function submit(){
             </tr>
         `);
         
-        $('.delete').click(deleteEmployee);
 
         // CLEAR INPUT VALUES
         $('#first-name').val('');
@@ -55,8 +54,13 @@ function submit(){
         // ADDS TO TOTAL MONTHLY COST
         totalSalary += Number(salary); //Adds employee salary to total salary count
         totalCost(totalSalary); 
+
+         // click event for delete button
+        $('.delete').click(deleteEmployee);
     }
 }
+
+
 
 function totalCost(salaries){
     
@@ -67,11 +71,11 @@ function totalCost(salaries){
     $('#monthly-cost').append(totalMonthly);
 
     if (totalMonthly > 20000){
-        $('#total-monthly').css({"backgroundColor":"red"});
+        $('#total-monthly').css({"color":"rgb(2552, 152, 152)"});
     }
 
     else{
-        $('#total-monthly').css({"backgroundColor":"transparent"});
+        $('#total-monthly').css({"color":"rgb(220, 255, 255)"});
     }
 }
 
@@ -80,7 +84,10 @@ function deleteEmployee(){
     $(this).parent().parent().empty();
 
     let salary = Number($(this).data('salary'));
-    totalSalary -= salary;
-    totalCost(totalSalary);
-}
+    console.log(salary);
 
+    totalSalary -= salary;
+    console.log(salary);
+    totalCost(totalSalary);
+    console.log(totalSalary);
+}
