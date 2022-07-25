@@ -5,6 +5,7 @@ $(readyNow);
 function readyNow() {
     console.log('Jquery Ready');
     $('#salary-submit').click(submit);
+    $('body').on('click','.delete',deleteEmployee);
 
 }
 // DECLARE TOTAL MONTHLY COST ARRAY
@@ -56,7 +57,7 @@ function submit(){
         totalCost(totalSalary); 
 
          // click event for delete button
-        $('.delete').click(deleteEmployee);
+       // $('.delete').click(deleteEmployee);
     }
 }
 
@@ -91,3 +92,5 @@ function deleteEmployee(){
     totalCost(totalSalary);
     console.log(totalSalary);
 }
+
+
